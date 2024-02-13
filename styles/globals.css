@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  /* 
+   * Main colors used for backgrounds and text.
+   * "foreground" is used for text and icons in these states.
+   *
+   * You can consult this link to understand impact of each variable.
+   * ==> https://www.figma.com/file/Zu4BtlBGkkDfCULfrPmYsk/Alembic-Marketplace-CSS?type=design&t=G8sE3G9G6kDVz4UK-6
+   */
+
+  --background: 180, 9%, 10%;
+  --foreground: 0, 0%, 100%;
+
+  /* Background for NFTs and actions */
+  --muted: 180, 20%, 7%;
+  --muted-foreground: 0, 0%, 100%;
+
+  /* Background colors for dropdown */
+  --popover: 180, 20%, 7%;
+  --popover-foreground: 0, 0%, 100%;
+
+  --border: 48, 86%, 78%;
+  --input: 48, 86%, 78%;
+
+  /* Background for Attributes and Last activities */
+  --card: 180, 9%, 10%%;
+  --card-foreground: 0, 0%, 100%;
+
+
+  /* 
+   * Main colors used for ui buttons, badges, links, and other elements that need to stand out.
+   * "foreground" is used for text and icons in these states.
+   */
+
+  --primary: 48, 86%, 78%;
+  --primary-foreground: 180, 20%, 7%;
+
+  --secondary: 180, 20%, 7%;
+  --secondary-foreground:  0, 0%, 100%;
+
+  --accent: 180, 20%, 7%;
+  --accent-foreground:  0, 0%, 100%;
+
+  --pending: 30 100% 50%;
+  --pending-foreground: 180, 9%, 10%%;
+
+  --success: 120 40% 50%;
+  --success-foreground: 180, 9%, 10%%;
+
+  --destructive: 0 60% 50%;
+  --destructive-foreground: 48, 86%, 78%;
+
+  --info: 194 78% 97%;
+  --info-foreground: 195 35% 60%;
+
+  --ring: 215 20.2% 65.1%;
+
+  --radius: 8px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1 "calt" 1;
+  }
+}
+
+
+/* Fix Gas fees Connect Wallet */
+#cometh-gas-modal-wrapper {
+  pointer-events: auto;
+  position: fixed;
+  z-index: 1000;
+}
